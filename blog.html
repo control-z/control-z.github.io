@@ -27,76 +27,143 @@
             border: none;
         }
 
+        .step-section {
+            max-width: 1200px;
+            margin: 0 auto 30px auto;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 12px;
+        }
+        .step-section.reverse {
+            flex-direction: row-reverse;
+        }
+        .step-content {
+            flex: 1;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        .step-media {
+            flex: 1;
+            min-width: 300px;
+        }
+        .step-media iframe {
+            width: 100%;
+            height: 350px;
+            border-radius: 8px;
+        }
+        .step-content h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+        .step-content a {
+            color: #667eea;
+        }
+
         /* Mobile responsive styles */
         @media screen and (max-width: 768px) {
-            table, thead, tbody, th, td, tr {
-                display: block;
+            .step-section, .step-section.reverse {
+                flex-direction: column;
             }
-            tr {
-                margin-bottom: 20px;
-            }
-            th, td {
+            .step-media {
                 width: 100%;
-                box-sizing: border-box;
             }
-            iframe {
+            .step-media iframe {
                 height: 300px;
-            }
-            /* Hide header row on mobile */
-            tr:first-child {
-                display: none;
-            }
-            /* Show data-label above each cell */
-            td::before {
-                content: attr(data-label);
-                display: block;
-                font-weight: bold;
-                margin-bottom: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <th>1. Original image.</th>
-            <th>2. Original image after background is removed.</th>
-            <th>3. Convert 2D to 3D model with Microsoft Trellis.2.</th>
-        </tr>
-        <tr>
-            <td data-label="1. Original image.">
-                <iframe src="https://drive.google.com/file/d/1U5SAXFDUdXnTzqD6k2PoQcHNitFI0XbW/preview" allow="autoplay"></iframe>
-            </td>
-            <td data-label="2. Original image after background is removed.">
-                <iframe src="https://drive.google.com/file/d/1gXdvXxSZ9k-O7bnsqAJK8TCruY8_Ooa5/preview" allow="autoplay"></iframe>
-            </td>
-            <td data-label="3. Convert 2D to 3D model with Microsoft Trellis.2.">
-                <iframe src="https://drive.google.com/file/d/1yNyYLoVCeFOwfQ4lQL__CsVRqmj3ElNu/preview" allow="autoplay"></iframe>
-            </td>
-        </tr>
-    </table>
+    <header style="max-width: 1200px; margin: 0 auto 30px auto; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; color: white;">
+        <h1 style="margin: 0;">🤖 From Photo to Animated 3D Robot: A Fun Adventure!</h1>
+        <p style="margin: 15px 0 0 0; opacity: 0.9;">So here's a fun story! My nephew built this awesome robot for a school project — pretty cool, right? 🎉 I only had a single photo of it, but I thought: <em>"What if I could bring this little guy to life in 3D?"</em> Challenge accepted!</p>
+    </header>
 
-    <table>
-        <tr>
-            <th>4. Load image into Blender.</th>
-            <th>5. Create a rig for the model.</th>
-            <th>6. Animate the rig.</th>
-        </tr>
-        <tr>
-            <td data-label="4. Load image into Blender.">
-                <iframe src="https://drive.google.com/file/d/1zAG6HLmCbfYqehB_8wrMLW-rZplBPHcL/preview" allow="autoplay"></iframe>
-            </td>
-            <td data-label="5. Create a rig for the model.">
-                <iframe src="https://drive.google.com/file/d/19vcGj57kJORPnpLroS-T_c4PUqIoy01I/preview" allow="autoplay"></iframe>
-            </td>
-            <td data-label="6. Animate the rig.">
-                <iframe src="https://drive.google.com/file/d/1KVQdiqZE7rdSYxb-WdaARAsD0wVslVd9/preview" allow="autoplay"></iframe>
-            </td>
-        </tr>
-    </table>
+    <!-- Step 1: Original Image -->
+    <section class="step-section">
+        <div class="step-content">
+            <h3>🖼️ Step 1: The Starting Point</h3>
+            <p>Here's the original photo of my nephew's robot creation. One single image — that's all I had to work with. But sometimes, that's all you need to start an adventure!</p>
+        </div>
+        <div class="step-media">
+            <iframe src="https://drive.google.com/file/d/1U5SAXFDUdXnTzqD6k2PoQcHNitFI0XbW/preview" allow="autoplay"></iframe>
+        </div>
+    </section>
 
-    <div style="text-align: center; margin: 20px 0;">
-        <iframe src="https://drive.google.com/file/d/17jbGEjGI4n5qb20W3cCNmSCgna3KNAB9/preview" allow="autoplay"></iframe>
-    </div>
+    <!-- Step 2: Background Removed -->
+    <section class="step-section reverse">
+        <div class="step-content">
+            <h3>✂️ Step 2: Bye-Bye Background!</h3>
+            <p>First things first — that photo had a messy background that needed to go. I headed over to <a href="https://www.remove.bg" target="_blank">remove.bg</a>, uploaded the image, and boom! Clean cutout in seconds. Magic! ✨</p>
+        </div>
+        <div class="step-media">
+            <iframe src="https://drive.google.com/file/d/1gXdvXxSZ9k-O7bnsqAJK8TCruY8_Ooa5/preview" allow="autoplay"></iframe>
+        </div>
+    </section>
+
+    <!-- Step 3: TRELLIS.2 3D Conversion -->
+    <section class="step-section">
+        <div class="step-content">
+            <h3>🧊 Step 3: Enter the World of AI-Powered 3D</h3>
+            <p>Here's where it gets really exciting! I discovered <a href="https://huggingface.co/spaces/microsoft/TRELLIS.2" target="_blank">Microsoft's TRELLIS.2</a> on Hugging Face Spaces.</p>
+            <p><strong>Wait, what's Hugging Face Spaces?</strong> 🤗 Think of it as a playground where developers and researchers share interactive AI demos that you can try right in your browser — no installation required! It's like an app store for AI experiments. The catch? Many Spaces (including TRELLIS.2) run on free CPU resources, which means they can be a bit slow and you might hit usage limits. But hey, free AI-powered 2D-to-3D conversion? I'll take the wait! ⏳</p>
+            <p>I uploaded my background-free robot image, let TRELLIS.2 work its magic, and downloaded the generated 3D model. Mind = blown. 🤯</p>
+        </div>
+        <div class="step-media">
+            <iframe src="https://drive.google.com/file/d/1yNyYLoVCeFOwfQ4lQL__CsVRqmj3ElNu/preview" allow="autoplay"></iframe>
+        </div>
+    </section>
+
+    <!-- Step 4: Blender Cleanup -->
+    <section class="step-section reverse">
+        <div class="step-content">
+            <h3>🎨 Step 4: Cleaning Up in Blender</h3>
+            <p>The raw 3D model was cool but needed some love. I loaded it into <strong>Blender</strong> and used the <em>Decimate Geometry</em> modifier with a ratio of 0.3 to simplify the mesh.</p>
+            <p>This keeps the model looking good while making it much lighter and easier to work with — essential for real-time applications like games!</p>
+        </div>
+        <div class="step-media">
+            <iframe src="https://drive.google.com/file/d/1zAG6HLmCbfYqehB_8wrMLW-rZplBPHcL/preview" allow="autoplay"></iframe>
+        </div>
+    </section>
+
+    <!-- Step 5: Rigging -->
+    <section class="step-section">
+        <div class="step-content">
+            <h3>🦴 Step 5: Rigging Adventures (with a Plot Twist!)</h3>
+            <p>Now for the fun part — making it move! I created a simple armature (skeleton) for the robot. But here's where I hit a snag: Blender's automatic weight painting just couldn't figure out how to attach the rig to my funky robot mesh. 😅</p>
+            <p>Enter the hero of our story: the <a href="https://github.com/hisanimations/Surface-Heat-Diffuse-Skinning" target="_blank">Surface Heat Diffuse Skinning</a> plugin from GitHub! This clever tool uses heat diffusion algorithms to properly bind the skeleton to the mesh surface. Worked like a charm! 🔥</p>
+        </div>
+        <div class="step-media">
+            <iframe src="https://drive.google.com/file/d/19vcGj57kJORPnpLroS-T_c4PUqIoy01I/preview" allow="autoplay"></iframe>
+        </div>
+    </section>
+
+    <!-- Step 6: Animation -->
+    <section class="step-section reverse">
+        <div class="step-content">
+            <h3>🎬 Step 6: Bringing It to Life!</h3>
+            <p>With the rig properly attached, it was time to animate! A few keyframes here, some pose adjustments there, and suddenly our little robot friend started moving.</p>
+            <p>Watching a static photo transform into a moving character is genuinely magical. 🪄</p>
+        </div>
+        <div class="step-media">
+            <iframe src="https://drive.google.com/file/d/1KVQdiqZE7rdSYxb-WdaARAsD0wVslVd9/preview" allow="autoplay"></iframe>
+        </div>
+    </section>
+
+    <!-- Step 7: Unity -->
+    <section class="step-section">
+        <div class="step-content">
+            <h3>🎮 Step 7: Off to Unity!</h3>
+            <p>With the rigged and animated robot ready, I exported it and brought it into <strong>Unity</strong>.</p>
+            <p>And just like that, my nephew's school project robot went from a simple photo to a fully animated 3D character ready for games, apps, or whatever adventure awaits! 🚀</p>
+            <p style="font-size: 18px; margin-top: 20px;"><strong>From a single photo to a game-ready 3D asset — what a journey!</strong> 🎉</p>
+        </div>
+        <div class="step-media">
+            <iframe src="https://drive.google.com/file/d/17jbGEjGI4n5qb20W3cCNmSCgna3KNAB9/preview" allow="autoplay"></iframe>
+        </div>
+    </section>
 </body>
 </html>
