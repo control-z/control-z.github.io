@@ -42,6 +42,17 @@
             iframe {
                 height: 300px;
             }
+            /* Hide header row on mobile */
+            tr:first-child {
+                display: none;
+            }
+            /* Show data-label above each cell */
+            td::before {
+                content: attr(data-label);
+                display: block;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -53,13 +64,13 @@
             <th>3. Convert 2D to 3D model with Microsoft Trellis.2.</th>
         </tr>
         <tr>
-            <td>
+            <td data-label="1. Original image.">
                 <iframe src="https://drive.google.com/file/d/1U5SAXFDUdXnTzqD6k2PoQcHNitFI0XbW/preview" allow="autoplay"></iframe>
             </td>
-            <td>
+            <td data-label="2. Original image after background is removed.">
                 <iframe src="https://drive.google.com/file/d/1gXdvXxSZ9k-O7bnsqAJK8TCruY8_Ooa5/preview" allow="autoplay"></iframe>
             </td>
-            <td>
+            <td data-label="3. Convert 2D to 3D model with Microsoft Trellis.2.">
                 <iframe src="https://drive.google.com/file/d/1yNyYLoVCeFOwfQ4lQL__CsVRqmj3ElNu/preview" allow="autoplay"></iframe>
             </td>
         </tr>
@@ -72,20 +83,20 @@
             <th>6. Animate the rig.</th>
         </tr>
         <tr>
-            <td>
+            <td data-label="4. Load image into Blender.">
                 <iframe src="https://drive.google.com/file/d/1zAG6HLmCbfYqehB_8wrMLW-rZplBPHcL/preview" allow="autoplay"></iframe>
             </td>
-            <td>
+            <td data-label="5. Create a rig for the model.">
                 <iframe src="https://drive.google.com/file/d/19vcGj57kJORPnpLroS-T_c4PUqIoy01I/preview" allow="autoplay"></iframe>
             </td>
-            <td>
+            <td data-label="6. Animate the rig.">
                 <iframe src="https://drive.google.com/file/d/1KVQdiqZE7rdSYxb-WdaARAsD0wVslVd9/preview" allow="autoplay"></iframe>
             </td>
         </tr>
     </table>
 
     <div style="text-align: center; margin: 20px 0;">
-        <iframe src="https://drive.google.com/file/d/17jbGEjGI4n5qb20W3cCNmSCgna3KNAB9/preview" allow="autoplay" style="width: 100%; max-width: 800px; height: 600px;"></iframe>
+        <iframe src="https://drive.google.com/file/d/17jbGEjGI4n5qb20W3cCNmSCgna3KNAB9/preview" allow="autoplay"></iframe>
     </div>
 </body>
 </html>
